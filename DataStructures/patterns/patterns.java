@@ -364,6 +364,6 @@ public class patterns {
         // charTriangleDescending();
     //    NumberPyramidUpDown();
     // NumberSolidPyramid();
-    CharPyramidUpDown();
+    // CharPyramidUpDown();
     }
 }
