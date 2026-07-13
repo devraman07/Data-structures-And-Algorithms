@@ -107,6 +107,219 @@ public class patterns {
         }
     }
 
+    public static void HollowTriangle() {
+        int n = 5;
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+
+            if (i == 1) {
+
+                System.out.print("*");
+            } else if (i == n) {
+
+                for (int k = 1; k <= 2 * i - 1; k++) {
+                    System.out.print("*");
+                }
+            } else {
+
+                System.out.print("*");
+                for (int m = 1; m <= 2 * i - 3; m++) {
+                    System.out.print(" ");
+                }
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void SolidDiamond() {
+        int n = 5;
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        for (int i = n - 1; i >= 1; i--) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void HollowDiamond() {
+        int n = 4;
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            if (i == 1) {
+                System.out.print("*");
+            } else {
+                System.out.print("*");
+                for (int j = 1; j <= 2 * (i - 1) - 1; j++) {
+                    System.out.print(" ");
+                }
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        for (int i = n - 1; i >= 1; i--) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            if (i == 1) {
+                System.out.print("*");
+            } else {
+                System.out.print("*");
+                for (int j = 1; j <= 2 * (i - 1) - 1; j++) {
+                    System.out.print(" ");
+                }
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void Butterfly() {
+        int n = 4;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            for (int k = 1; k <= 2 * (n - i); k++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i = n; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            for (int k = 1; k <= 2 * (n - i); k++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void NumberTriangle() {
+        int n = 4;
+        for (int i = 1; i <= n; i++) {
+            int counter = 1;
+            for (int j = 1; j <= i; j++) {
+                System.out.print(counter);
+                counter++;
+            }
+            System.out.println();
+        }
+    }
+
+    public static void ContinuousNumberTriangle() {
+        int n = 4;
+        int counter = 1;
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(counter + " ");
+                counter++;
+            }
+            System.out.println();
+        }
+    }
+
+    public static void charTriangle() {
+        int n = 4;
+        for (int i = 1; i <= n; i++) {
+            char ch = 'A';
+            for (int j = 1; j <= i; j++) {
+                System.out.print(ch);
+                ch++;
+            }
+            System.out.println();
+        }
+    }
+
+    public static void ContinuecharTriangle() {
+        int n = 4;
+        char ch = 'A';
+        for (int i = 1; i <= n; i++) {
+
+            for (int j = 1; j <= i; j++) {
+                System.out.print(ch);
+                ch++;
+            }
+            System.out.println();
+        }
+    }
+
+    public static void numbersfullTriangle() {
+        int n = 4;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            int counter = 1;
+            for (int j = 1; j <= i; j++) {
+                System.out.print(counter);
+                counter++;
+            }
+            System.out.println();
+        }
+    }
+
+    public static void NumberPyramidUpDown() {
+        int n = 4;
+        for (int i = 1; i <= n; i++) {
+
+            for (int s = 1; s <= n - i; s++) {
+                System.out.print("  ");
+            }
+
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " ");
+            }
+
+            for (int j = i - 1; j >= 1; j--) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void NumberSolidPyramid() {
+        int n = 4;
+        for(int i = 1;  i <= n; i++) {
+            for(int j= 1; j <= n - i; j++) {
+                System.out.print( " "  + " ");
+            } 
+            for(int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print(i + " ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         // SolidRectangle();
         // solidTriangle();
@@ -115,7 +328,17 @@ public class patterns {
         // SolidPyramid();
         // ReverseSolidPyramid();
         // HollowRectangle();
-        HollowRightTriangle();
-        ;
+        // HollowRightTriangle();
+        // HollowTriangle();
+        // SolidDiamond();
+        // HollowDiamond();
+        // Butterfly();
+        // NumberTriangle();
+        // ContinuousNumberTriangle();
+        // charTriangle();
+        // ContinuecharTriangle();
+        // charTriangleDescending();
+    //    NumberPyramidUpDown();
+    NumberSolidPyramid();
     }
 }
