@@ -478,3 +478,150 @@ nextLine()
 - contains()
 - replace()
 - StringBuilder
+
+
+---
+
+# Useful Character Class Methods
+
+These methods help us identify different types of characters without writing long conditions.
+
+| Method | Purpose |
+|---------|---------|
+| `Character.isLetter(c)` | Checks whether the character is a letter (A-Z or a-z). |
+| `Character.isDigit(c)` | Checks whether the character is a digit (0-9). |
+| `Character.isUpperCase(c)` | Checks whether the character is uppercase. |
+| `Character.isLowerCase(c)` | Checks whether the character is lowercase. |
+| `Character.isLetterOrDigit(c)` | Checks whether the character is a letter or digit. Useful while finding special characters. |
+| `Character.isWhitespace(c)` | Checks whether the character is a whitespace (space, tab, etc.). |
+| `Character.toUpperCase(c)` | Converts a character to uppercase. |
+| `Character.toLowerCase(c)` | Converts a character to lowercase. |
+
+---
+
+## Examples
+
+### Check if Character is a Letter
+
+```java
+char ch = 'A';
+
+if (Character.isLetter(ch)) {
+    System.out.println("Letter");
+}
+```
+
+---
+
+### Check if Character is a Digit
+
+```java
+char ch = '7';
+
+if (Character.isDigit(ch)) {
+    System.out.println("Digit");
+}
+```
+
+---
+
+### Convert to Lowercase
+
+```java
+char ch = 'R';
+
+System.out.println(Character.toLowerCase(ch));
+```
+
+Output
+
+```
+r
+```
+
+---
+
+# Useful String Methods
+
+| Method | Purpose |
+|---------|---------|
+| `str.length()` | Returns the length of the string. |
+| `str.charAt(i)` | Returns the character at index `i`. |
+| `str.toCharArray()` | Converts the string into a character array for traversal. |
+| `str.indexOf(c)` | Returns the first occurrence of a character or `-1` if not found. |
+| `str.toLowerCase()` | Converts the complete string to lowercase. |
+| `str.toUpperCase()` | Converts the complete string to uppercase. |
+
+---
+
+## Examples
+
+### Convert String to Character Array
+
+```java
+String str = "JAVA";
+
+char[] arr = str.toCharArray();
+
+for (char ch : arr) {
+    System.out.print(ch + " ");
+}
+```
+
+Output
+
+```
+J A V A
+```
+
+---
+
+### Find Index of a Character
+
+```java
+String str = "OpenAI";
+
+System.out.println(str.indexOf('A'));
+```
+
+Output
+
+```
+4
+```
+
+---
+
+### Convert Entire String to Uppercase
+
+```java
+String str = "backend";
+
+System.out.println(str.toUpperCase());
+```
+
+Output
+
+```
+BACKEND
+```
+
+---
+
+# When Will I Use These?
+
+| Problem | Methods You'll Use |
+|----------|--------------------|
+| Count vowels | `charAt()`, `length()`, `toLowerCase()` |
+| Count consonants | `isLetter()`, `toLowerCase()` |
+| Count digits | `isDigit()` |
+| Count uppercase | `isUpperCase()` |
+| Count lowercase | `isLowerCase()` |
+| Count special characters | `isLetterOrDigit()`, `isWhitespace()` |
+| Reverse string | `charAt()`, `length()` |
+| Palindrome | `charAt()`, `length()`, `toLowerCase()` *(optional)* |
+| Print characters | `charAt()` or `toCharArray()` |
+| Search character | `indexOf()` |
+| Case-insensitive comparison | `toLowerCase()` or `toUpperCase()` |
+
+---
