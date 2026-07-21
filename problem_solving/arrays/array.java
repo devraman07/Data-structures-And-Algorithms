@@ -58,7 +58,6 @@ public class array {
   static int[] sumofPosMin(int arr[]) {
     int posSum = 0;
     int negSum = 0;
-    int totalSum = 0;
 
     for (int i = 0; i < arr.length; i++) {
       if (arr[i] > 0) {
@@ -166,8 +165,8 @@ public class array {
     // int arr1[] = { 4, 2, 5, 1, 3 };
     // int arr2[] = { 6, 3, 4, 5, 7 };
     // findIntersection(arr1, arr2);
-  
-    int arr[] = {7, 1, 4, 2, 6, 3};
+
+    int arr[] = { 7, 1, 4, 2, 6, 3 };
     printAlternateExtremes(arr);
 
   }
